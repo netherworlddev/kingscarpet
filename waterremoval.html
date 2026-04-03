@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Water Removal & Restoration | Kings Carpet Cleaning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* Service Page Specific Layout */
+    .service-header-gap {
+      padding-top: 70px;
+      background: var(--black);
+    }
+    
+    .service-hero {
+      position: relative;
+      /* Background focused on professional water extraction/restoration */
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('water1.PNG') center/cover;
+      padding: 100px 40px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .service-layout {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 50px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .service-main h2 { margin-top: 30px; }
+    .service-main p { margin-bottom: 20px; color: var(--text-mid); line-height: 1.8; }
+    
+    .feature-list { list-style: none; margin: 30px 0; }
+    .feature-list li { 
+      display: flex; 
+      gap: 15px; 
+      margin-bottom: 20px; 
+      align-items: flex-start;
+    }
+    .feature-list i { color: var(--red); font-weight: bold; font-style: normal; }
+
+    /* Sticky Sidebar Form */
+    .service-sidebar {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      background: var(--gray);
+      padding: 35px;
+      border-top: 4px solid var(--red);
+    }
+
+    .sidebar-form-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .side-input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .side-submit {
+      width: 100%;
+      background: var(--red);
+      color: white;
+      border: none;
+      padding: 16px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .side-submit:hover { background: var(--red-dark); }
+
+/* ══ MOBILE OPTIMIZATION ══ */
+@media (max-width: 900px) {
+      .service-layout { grid-template-columns: 1fr; padding: 40px 20px; }
+      .service-sidebar { position: static; }
+    }
+
+    @media (max-width: 600px) {
+      .service-hero { padding: 60px 20px; }
+      h1 { font-size: 38px; line-height: 1.1; }
+      .hero-sub { font-size: 16px; margin-top: 15px; }
+      .service-layout { padding: 40px 20px; gap: 30px; }
+      .feature-list li { gap: 12px; font-size: 15px; }
+      .feature-list i { font-size: 18px; margin-top: 2px; }
+      .service-sidebar { padding: 25px 20px; margin-top: 10px; border-top: 6px solid var(--red); }
+      .side-input { font-size: 16px; padding: 14px; margin-bottom: 12px; }
+      .side-submit { padding: 20px; font-size: 18px; letter-spacing: 2px; }
+      footer { text-align: center; padding: 40px 20px; }
+      .footer-inner { justify-content: center; flex-direction: column; align-items: center; }
+      .footer-brand p { margin: 10px auto; }
+    }
+
+    .mobile-nav { height: calc(100vh - 70px); background: #000; }
+    .mob-link, .mob-toggle { padding: 20px 24px; font-size: 16px; }
+    .mob-cta { margin: 20px; padding: 18px; font-size: 16px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-crown"></span>
+    <div class="nav-logo-text">KINGS<br><span>CARPET CLEANING</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li>
+      <button>Services <span class="arrow"></span></button>
+      <div class="dropdown-menu">
+        <a href="carpetcleaning.html" onclick="closeMobile()">🧹 Carpet Cleaning</a>
+        <a href="upholstery.html" onclick="closeMobile()">🛋️ Upholstery</a>
+        <a href="petstain.html" onclick="closeMobile()">🐾 Pet Stain &amp; Odor</a>
+        <a href="tilegrout.html" onclick="closeMobile()">🔲 Tile &amp; Grout</a>
+        <a href="carpetinstall.html" onclick="closeMobile()">🏠 Carpet Installation</a>
+        <a href="planksflooring.html" onclick="closeMobile()">🪵 Planks &amp; Flooring</a>
+        <a href="airduct.html" onclick="closeMobile()">💨 Air Duct Cleaning</a>
+        <a href="rugcleaning.html" onclick="closeMobile()">🧺 Rug Cleaning</a>
+        <a href="waterremoval.html" onclick="closeMobile()">💧 Water Removal &amp; Restoration</a>
+      </div>
+    </li>
+    <li><button>Locations <span class="arrow"></span></button>
+      <div class="dropdown-menu">
+        <a href="dallas.html" onclick="closeMobile()">📍 Dallas</a>
+        <a href="plano.html" onclick="closeMobile()">📍 Plano</a>
+        <a href="frisco.html" onclick="closeMobile()">📍 Frisco</a>
+        <a href="wylie.html" onclick="closeMobile()">📍 Wylie</a>
+        <a href="fortworth.html" onclick="closeMobile()">📍 Fort Worth</a>
+        <a href="richardson.html" onclick="closeMobile()">📍 Richardson</a>
+        <a href="arlington.html" onclick="closeMobile()">📍 Arlington</a>
+        <a href="garland.html" onclick="closeMobile()">📍 Garland</a>
+      </div>
+    </li>
+    <li><a href="index.html#quote" class="nav-cta">Free Quote</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mob-item"><a href="index.html" class="mob-link">Home</a></div>
+  <div class="mob-item">
+    <button class="mob-toggle" onclick="toggleMob(this)">Services <span class="mob-arrow"></span></button>
+    <div class="mob-submenu">
+      <a href="carpetcleaning.html" onclick="closeMobile()">🧹 Carpet Cleaning</a>
+      <a href="upholstery.html" onclick="closeMobile()">🛋️ Upholstery</a>
+      <a href="petstain.html" onclick="closeMobile()">🐾 Pet Stain &amp; Odor</a>
+      <a href="tilegrout.html" onclick="closeMobile()">🔲 Tile &amp; Grout</a>
+      <a href="carpetinstall.html" onclick="closeMobile()">🏠 Carpet Installation</a>
+      <a href="planksflooring.html" onclick="closeMobile()">🪵 Planks &amp; Flooring</a>
+      <a href="airduct.html" onclick="closeMobile()">💨 Air Duct Cleaning</a>
+      <a href="rugcleaning.html" onclick="closeMobile()">🧺 Rug Cleaning</a>
+      <a href="waterremoval.html" onclick="closeMobile()">💧 Water Removal &amp; Restoration</a>
+    </div>
+  </div>
+  <div class="mob-item">
+    <button class="mob-toggle" onclick="toggleMob(this)">Locations <span class="mob-arrow"></span></button>
+    <div class="mob-submenu">
+      <a href="dallas.html" onclick="closeMobile()">📍 Dallas</a>
+      <a href="plano.html" onclick="closeMobile()">📍 Plano</a>
+      <a href="frisco.html" onclick="closeMobile()">📍 Frisco</a>
+      <a href="wylie.html" onclick="closeMobile()">📍 Wylie</a>
+      <a href="fortworth.html" onclick="closeMobile()">📍 Fort Worth</a>
+      <a href="richardson.html" onclick="closeMobile()">📍 Richardson</a>
+      <a href="arlington.html" onclick="closeMobile()">📍 Arlington</a>
+      <a href="garland.html" onclick="closeMobile()">📍 Garland</a>
+    </div>
+  </div>
+  <a href="index.html#quote" class="mob-cta">♛ &nbsp;Get a Free Quote</a>
+</div>
+<div class="mobile-nav" id="mobileNav">
+  <div class="mob-item"><a href="index.html" class="mob-link">Home</a></div>
+  <div class="mob-item">
+    <button class="mob-toggle" onclick="toggleMob(this)">Services <span class="mob-arrow"></span></button>
+    <div class="mob-submenu">
+      <a href="carpetcleaning.html">🧹 Carpet Cleaning</a>
+      <a href="upholstery.html">🛋️ Upholstery</a>
+      <a href="water-restoration.html">💧 Water Restoration</a>
+      <a href="carpetinstall.html">🏠 Carpet Installation</a>
+      <a href="waterremoval.html">💧 Water Removal &amp; Restoration</a>
+      <a href="planksflooring.html">🪵 Planks &amp; Flooring</a>
+      <a href="airduct.html">💨 Air Duct Cleaning</a>
+      <a href="rugcleaning.html">🧺 Rug Cleaning</a>
+    </div>
+  </div>
+  <a href="index.html#quote" class="mob-cta">♛ &nbsp;Get a Free Quote</a>
+</div>
+
+<div class="service-header-gap"></div>
+
+<section class="service-hero">
+  <div class="section-inner">
+    <p class="section-label" style="color:var(--red)">Emergency Response Team</p>
+    <h1>WATER REMOVAL & <span class="red">RESTORATION</span></h1>
+    <p class="hero-sub" style="margin: 0 auto; max-width: 800px;">Fast-acting emergency water extraction and structural drying to protect your home from mold and permanent damage.</p>
+  </div>
+</section>
+
+<div class="service-layout">
+  <main class="service-main">
+    <h2>Minutes Matter in a Flood</h2>
+    <p>Whether it’s a burst pipe, a leaking water heater, or storm damage, water can ruin your home's structure and subfloors in a matter of hours. At Kings, we provide rapid-response water removal services designed to stop damage in its tracks. Our IICRC-trained technicians use industrial-grade equipment to extract standing water and implement professional drying protocols.</p>
+
+    <ul class="feature-list">
+      <li><i>✓</i> <div><strong>Industrial Extraction:</strong> We utilize truck-mounted vacuum systems that remove hundreds of gallons of water in minutes, far outperforming standard shop-vacs.</div></li>
+      <li><i>✓</i> <div><strong>Structural Drying & Dehumidification:</strong> We deploy high-velocity air movers and LGR dehumidifiers to pull moisture out of walls, floors, and the air to prevent warping.</div></li>
+      <li><i>✓</i> <div><strong>Anti-Microbial Treatment:</strong> To prevent mold and mildew growth, we apply hospital-grade botanical disinfectants to all affected surfaces.</div></li>
+    </ul>
+
+    <h3>Our Restoration Process</h3>
+    <p>1. <strong>Inspection & Assessment:</strong> We use moisture meters and thermal imaging to find "hidden" water behind baseboards and under padding.<br>
+       2. <strong>Water Extraction:</strong> Immediate removal of standing water to contain the damage area.<br>
+       3. <strong>Drying & Dehumidifying:</strong> Continuous monitoring of humidity levels until your structure reaches "dry standard" levels.<br>
+       4. <strong>Sanitization:</strong> Deep cleaning and deodorizing to ensure your home is safe, healthy, and odor-free.</p>
+  </main>
+
+  <aside class="service-sidebar">
+    <div class="sidebar-form-title">Emergency Quote</div>
+    <form action="https://formspree.io/f/xpqojbdk" method="POST" id="sidebar-form">
+      
+      <input type="text" name="name" class="side-input" placeholder="Your Name" required>
+      
+      <input type="email" name="email" class="side-input" placeholder="Email Address" required>
+      
+      <input type="tel" name="phone" class="side-input" placeholder="Phone Number" required>
+      
+      <select name="service" class="side-input" required>
+        <option value="Water Restoration" selected>Water Removal & Restoration</option>
+        <option>Carpet Cleaning</option>
+        <option>Upholstery</option>
+        <option>Pet Stain & Odor</option>
+        <option>Tile & Grout</option>
+        <option>Carpet Installation</option>
+        <option>Planks & Flooring</option>
+        <option>Air Duct Cleaning</option>
+        <option>Rug Cleaning</option>
+        <option>Water Removal & Restoration</option>
+        <option>Multiple Services</option>
+      </select>
+      
+      <textarea name="message" class="side-input" placeholder="Describe the situation (e.g., burst pipe in living room, wet carpets)" rows="4"></textarea>
+  
+      <input type="text" name="_gotcha" style="display:none" />
+  
+      <button type="submit" class="side-submit" id="side-submit-btn">♛ Help Me Now</button>
+    </form>
+  </aside>
+</div>
+
+<script>
+    const sideForm = document.getElementById("sidebar-form");
+    const sideBtn = document.getElementById("side-submit-btn");
+  
+    async function handleSubmit(event) {
+      event.preventDefault();
+      sideBtn.disabled = true;
+      sideBtn.textContent = "Sending...";
+  
+      const data = new FormData(event.target);
+  
+      fetch(event.target.action, {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          sideBtn.textContent = "✓ Request Sent!";
+          sideBtn.style.background = "#222"; 
+          sideForm.reset();
+        } else {
+          sideBtn.textContent = "Error!";
+          sideBtn.disabled = false;
+        }
+      }).catch(error => {
+        sideBtn.textContent = "Error!";
+        sideBtn.disabled = false;
+      });
+    }
+  
+    sideForm.addEventListener("submit", handleSubmit);
+</script>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo-text" style="font-size:22px">KINGS <span>CARPET CLEANING</span></div>
+      <p>© 2026 Kings Carpet Cleaning. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+
+  function toggleMob(btn) {
+    const sub = btn.nextElementSibling;
+    sub.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+
+  function closeMobile() {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+  }
+</script>
+</body>
+</html>w

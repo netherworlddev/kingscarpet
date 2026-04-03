@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css">
-  <title>Professional Upholstery Cleaning | Kings Carpet Cleaning</title>
+  <title>Tile & Grout Cleaning | Kings Carpet Cleaning</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
   <style>
     /* Service Page Specific Layout */
@@ -15,9 +15,9 @@
     
     .service-hero {
       position: relative;
-      /* Updated to a high-quality sofa/upholstery background */
+      /* Background focused on sparkling clean tile/bathroom/kitchen */
       background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                  url('upholstery.jpg') center/cover;
+                  url('RenderedImage.jpeg') center/cover;
       padding: 100px 40px;
       text-align: center;
       color: var(--white);
@@ -44,6 +44,7 @@
     }
     .feature-list i { color: var(--red); font-weight: bold; font-style: normal; }
 
+    /* Sticky Sidebar Form */
     .service-sidebar {
       position: sticky;
       top: 100px;
@@ -81,81 +82,6 @@
       transition: background 0.3s;
     }
     .side-submit:hover { background: var(--red-dark); }
-
-    @media (max-width: 900px) {
-      .service-layout { grid-template-columns: 1fr; padding: 40px 20px; }
-      .service-sidebar { position: static; }
-    }
-    /* ══ MOBILE ENHANCEMENTS ══ */
-@media (max-width: 600px) {
-  /* Increase Hero Impact */
-  .service-hero {
-    padding: 60px 20px;
-  }
-  
-  h1 {
-    font-size: 38px; /* Balanced for narrow screens */
-    line-height: 1.1;
-  }
-
-  .hero-sub {
-    font-size: 16px;
-    margin-top: 15px;
-  }
-
-  /* Improve Service Layout Spacing */
-  .service-layout {
-    padding: 40px 20px;
-    gap: 30px;
-  }
-
-  /* Make List Items easier to read */
-  .feature-list li {
-    gap: 12px;
-    font-size: 15px;
-  }
-
-  .feature-list i {
-    font-size: 18px;
-    margin-top: 2px;
-  }
-
-  /* Optimize Sticky Sidebar for Stacking */
-  .service-sidebar {
-    padding: 25px 20px;
-    margin-top: 10px;
-    border-top: 6px solid var(--red); /* Thicker accent for mobile visual break */
-  }
-
-  /* Increase Touch Target for Form Inputs */
-  .side-input {
-    font-size: 16px; /* Prevents iOS auto-zoom on focus */
-    padding: 14px;
-    margin-bottom: 12px;
-  }
-
-  .side-submit {
-    padding: 20px;
-    font-size: 18px;
-    letter-spacing: 2px;
-  }
-
-  /* Footer Adjustments */
-  footer {
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .footer-inner {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-brand p {
-    margin: 10px auto;
-  }
-}
 
 /* ══ MOBILE OPTIMIZATION ══ */
 @media (max-width: 900px) {
@@ -258,32 +184,56 @@
 </div>
 
 <div class="service-header-gap"></div>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mob-item"><a href="index.html" class="mob-link">Home</a></div>
+  <div class="mob-item">
+    <button class="mob-toggle" onclick="toggleMob(this)">Services <span class="mob-arrow"></span></button>
+    <div class="mob-submenu">
+      <a href="carpetcleaning.html">🧹 Carpet Cleaning</a>
+      <a href="upholstery.html">🛋️ Upholstery</a>
+      <a href="petstain.html">🐾 Pet Stain &amp; Odor</a>
+      <a href="tilegrout.html">🔲 Tile &amp; Grout</a>
+      <a href="carpetinstall.html">🏠 Carpet Installation</a>
+      <a href="waterremoval.html">💧 Water Removal &amp; Restoration</a>
+    </div>
+  </div>
+  <div class="mob-item">
+    <button class="mob-toggle" onclick="toggleMob(this)">Locations <span class="mob-arrow"></span></button>
+    <div class="mob-submenu">
+      <a href="index.html#quote">📍 Dallas</a>
+      <a href="index.html#quote">📍 Plano</a>
+    </div>
+  </div>
+  <a href="index.html#quote" class="mob-cta">♛ &nbsp;Get a Free Quote</a>
+</div>
+
 <div class="service-header-gap"></div>
 
 <section class="service-hero">
   <div class="section-inner">
-    <p class="section-label" style="color:var(--red)">Gentle &amp; Powerful</p>
-    <h1>ROYAL <span class="red">UPHOLSTERY CARE</span></h1>
-    <p class="hero-sub" style="margin: 0 auto">Restore the beauty and comfort of your sofas, chairs, and fabric furniture with our deep-cleaning restoration.</p>
+    <p class="section-label" style="color:var(--red)">Deep Porous Restoration</p>
+    <h1>TILE &amp; <span class="red">GROUT REVIVAL</span></h1>
+    <p class="hero-sub" style="margin: 0 auto">Stop scrubbing on your hands and knees. We blast away years of built-up grime and seal your grout for long-lasting beauty.</p>
   </div>
 </section>
 
 <div class="service-layout">
   <main class="service-main">
-    <h2>Refresh Your Home Instantly</h2>
-    <p>Your furniture is an investment. Over time, fabric fibers trap skin oils, dust, and allergens that can cause premature wear and dull the appearance of your home. Our upholstery specialists use precision tools designed specifically for delicate furniture fabrics.</p>
+    <h2>Bring Back the Shine</h2>
+    <p>Grout is incredibly porous, acting like a sponge for mopping water, grease, and bacteria. Over time, your grout lines darken and become a breeding ground for mold. Our high-pressure steam system reaches deep into those pores to flush out contaminants that standard cleaning can't touch.</p>
 
     <ul class="feature-list">
-      <li><i>✓</i> <div><strong>Fabric Identification:</strong> We test fibers to ensure the safest cleaning method for cotton, wool, silk, or synthetics.</div></li>
-      <li><i>✓</i> <div><strong>Odor Elimination:</strong> Our pH-balanced treatments don't just mask smells—they neutralize them at the source.</div></li>
-      <li><i>✓</i> <div><strong>Allergen Removal:</strong> We extract deep-seated dust mites and pet dander from every crevice of your furniture.</div></li>
+      <li><i>✓</i> <div><strong>High-Pressure Extraction:</strong> We use specialized "swirl" tools that contain the water while blasting grime at 1000+ PSI.</div></li>
+      <li><i>✓</i> <div><strong>Grout Sealing:</strong> After cleaning, we apply a professional-grade sealer to prevent future staining and liquid absorption.</div></li>
+      <li><i>✓</i> <div><strong>Safe for All Surfaces:</strong> Whether it's Ceramic, Porcelain, Travertine, or Slate, we have the right pH-neutral solution.</div></li>
     </ul>
 
-    <h3>Our 4-Step Furniture Revival</h3>
-    <p>1. <strong>Fabric Inspection:</strong> We identify the weave and soil level to prevent shrinkage or color bleeding.<br>
-       2. <strong>Low-Moisture Pre-Treatment:</strong> Gently loosens body oils and surface grime without soaking the cushions.<br>
-       3. <strong>Controlled Extraction:</strong> Hand-held tools pull dirt away while keeping the internal padding dry.<br>
-       4. <strong>Fiber Grooming:</strong> We set the nap of the fabric to ensure it looks brand new once dry.</p>
+    <h3>Our Professional Tile Process</h3>
+    <p>1. <strong>Pre-Treatment:</strong> An alkaline-based cleaner is applied to break down grease and heavy soil.<br>
+       2. <strong>Power Scrub:</strong> We use mechanical brushes to agitate the grout lines and loosen stubborn debris.<br>
+       3. <strong>Turbo Wash:</strong> High-pressure hot water extraction flushes everything into our truck-mounted waste tank.<br>
+       4. <strong>Protective Seal:</strong> We apply a clear penetrative sealer to keep your floors looking "just cleaned" for longer.</p>
   </main>
 
   <aside class="service-sidebar">
